@@ -3,6 +3,7 @@ package bashrefs
 #Source: "bash-manual" | "wooledge" | "shellcheck" | "google-bash-guide"
 
 #Cluster: {
+	title: string
 	exercises: [...string] & [_, ...]
 	refs: [#Source]: [...string]
 }
@@ -26,6 +27,7 @@ clusters: [string]: #Cluster
 
 clusters: {
 	"script-contract": {
+		title: "Script contract"
 		exercises: [
 			"hello-world",
 			"two-fer",
@@ -64,6 +66,7 @@ clusters: {
 	}
 
 	"string-normalization": {
+		title: "String normalization / text transformation"
 		exercises: [
 			"reverse-string",
 			"acronym",
@@ -114,6 +117,7 @@ clusters: {
 	}
 
 	arithmetic: {
+		title: "Arithmetic / integer algorithms"
 		exercises: [
 			"armstrong-numbers",
 			"difference-of-squares",
@@ -174,6 +178,7 @@ clusters: {
 	}
 
 	"arrays-collections": {
+		title: "Arrays / lookup tables / collections"
 		exercises: [
 			"allergies",
 			"resistor-color",
@@ -218,6 +223,7 @@ clusters: {
 	}
 
 	"line-io-parsing": {
+		title: "Line I/O / parsing"
 		exercises: [
 			"grep",
 			"wordy",
@@ -259,6 +265,7 @@ clusters: {
 	}
 
 	"external-commands": {
+		title: "External commands / subprocesses"
 		exercises: [
 			"gigasecond",
 			"meetup",
@@ -291,6 +298,7 @@ clusters: {
 	}
 
 	"text-generation": {
+		title: "Text generation / formatted output"
 		exercises: [
 			"bottle-song",
 			"food-chain",
@@ -329,6 +337,7 @@ clusters: {
 	}
 
 	"matrix-grid": {
+		title: "Matrix / grid algorithms"
 		exercises: [
 			"flower-field",
 			"ocr-numbers",
@@ -365,6 +374,7 @@ clusters: {
 	}
 
 	"state-machines": {
+		title: "State machines / command interpreters"
 		exercises: [
 			"robot-simulator",
 			"bowling",
@@ -405,6 +415,7 @@ clusters: {
 	}
 
 	"search-optimization": {
+		title: "Search / optimization"
 		exercises: [
 			"binary-search",
 			"knapsack",

@@ -4,31 +4,85 @@ set -euo pipefail
 spec="${BASH_CLUSTER_SPEC:-refs/spec/bash-track-clusters.json}"
 
 usage() {
-  cat >&2 <<'EOF'
+  cat >&2 <<'USAGE'
 usage:
+  bash-cluster clusters
   bash-cluster list <cluster>
   bash-cluster refs <cluster>
   bash-cluster next <cluster>
+  bash-cluster path <cluster>
   bash-cluster download <cluster>
   bash-cluster copy <cluster>
+  bash-cluster project [<cluster>]
+  bash-cluster index [<cluster>|--all]
+  bash-cluster validate
 
 env:
-  BASH_CLUSTER_SPEC   default: refs/spec/bash-track-clusters.json
-  BASH_TRACK_REPO     official exercism/bash git repo
-  BASH_LOCAL_REPO     destination repo for sorted copies
-EOF
+  BASH_CLUSTER_SPEC      default: refs/spec/bash-track-clusters.json
+  BASH_TRACK_REPO        official exercism/bash git repo, used by copy/download validation
+  BASH_LOCAL_REPO        destination repo root; projected exercises land in $BASH_LOCAL_REPO/bash
+  BASH_PROJECTION_ROOT   override projected exercise root directly
+USAGE
+}
+
+die() {
+  printf 'error: %s\n' "$*" >&2
+  exit 1
 }
 
 need_spec() {
-  [[ -f "$spec" ]] || {
-    printf 'missing spec: %s\n' "$spec" >&2
-    exit 1
-  }
+  [[ -f "$spec" ]] || die "missing spec: $spec"
+}
+
+projection_root() {
+  if [[ -n "${BASH_PROJECTION_ROOT:-}" ]]; then
+    printf '%s\n' "$BASH_PROJECTION_ROOT"
+  elif [[ -n "${BASH_LOCAL_REPO:-}" ]]; then
+    printf '%s/bash\n' "$BASH_LOCAL_REPO"
+  elif [[ -d bash ]]; then
+    printf '%s\n' "bash"
+  else
+    die 'set BASH_LOCAL_REPO or BASH_PROJECTION_ROOT'
+  fi
 }
 
 cluster_exists() {
   local cluster="$1"
-  jq -e --arg cluster "$cluster" '.clusters[$cluster]' "$spec" >/dev/null
+  jq -e --arg cluster "$cluster" '.clusters | has($cluster)' "$spec" >/dev/null
+}
+
+need_cluster() {
+  local cluster="$1"
+  [[ -n "$cluster" ]] || { usage; exit 2; }
+  cluster_exists "$cluster" || die "unknown cluster: $cluster"
+}
+
+ordered_clusters() {
+  jq -r '.order[]' "$spec"
+}
+
+cluster_index() {
+  local cluster="$1"
+  jq -er --arg cluster "$cluster" '.order | index($cluster)' "$spec"
+}
+
+cluster_ordinal() {
+  local cluster="$1"
+  local index
+  index="$(cluster_index "$cluster")"
+  printf '%d\n' "$((index + 1))"
+}
+
+cluster_title() {
+  local cluster="$1"
+  jq -r --arg cluster "$cluster" '.clusters[$cluster].title // $cluster' "$spec"
+}
+
+cluster_path_name() {
+  local cluster="$1"
+  local ordinal
+  ordinal="$(cluster_ordinal "$cluster")"
+  printf '%02d-%s\n' "$ordinal" "$cluster"
 }
 
 cluster_exercises() {
@@ -36,26 +90,203 @@ cluster_exercises() {
   jq -r --arg cluster "$cluster" '.clusters[$cluster].exercises[]' "$spec"
 }
 
+cluster_count() {
+  local cluster="$1"
+  jq -r --arg cluster "$cluster" '.clusters[$cluster].exercises | length' "$spec"
+}
+
+copy_cluster() {
+  local cluster="$1"
+  need_cluster "$cluster"
+
+  : "${BASH_TRACK_REPO:?set BASH_TRACK_REPO to official exercism/bash clone}"
+  local root src_root dst_root exercise src dst
+
+  root="$(projection_root)"
+  src_root="$BASH_TRACK_REPO/exercises/practice"
+  dst_root="$root/$(cluster_path_name "$cluster")"
+
+  mkdir -p "$dst_root"
+
+  while IFS= read -r exercise; do
+    src="$src_root/$exercise"
+    dst="$dst_root/$exercise"
+
+    [[ -d "$src" ]] || die "missing source exercise: $src"
+
+    printf '==> copy %s -> %s\n' "$src" "$dst" >&2
+    mkdir -p "$dst"
+    rsync -a --delete "$src/" "$dst/"
+  done < <(cluster_exercises "$cluster")
+}
+
+generate_root_index() {
+  local root cluster title path count ordinal
+  root="$(projection_root)"
+  mkdir -p "$root"
+
+  {
+    printf '# Bash Exercise Progression\n\n'
+    while IFS= read -r cluster; do
+      ordinal="$(cluster_ordinal "$cluster")"
+      title="$(cluster_title "$cluster")"
+      path="$(cluster_path_name "$cluster")"
+      count="$(cluster_count "$cluster")"
+      printf '%d. [%s](%s/) — %s exercises\n' "$ordinal" "$title" "$path" "$count"
+    done < <(ordered_clusters)
+  } > "$root/index.md"
+
+  printf '==> wrote %s\n' "$root/index.md" >&2
+}
+
+generate_cluster_index() {
+  local cluster="$1"
+  need_cluster "$cluster"
+
+  local root path dir title prev next refs exercise
+  root="$(projection_root)"
+  path="$(cluster_path_name "$cluster")"
+  dir="$root/$path"
+  title="$(cluster_title "$cluster")"
+  mkdir -p "$dir"
+
+  prev="$(jq -r --arg cluster "$cluster" '
+    .order as $order
+    | ($order | index($cluster)) as $i
+    | if $i != null and $i > 0 then $order[$i - 1] else empty end
+  ' "$spec")"
+
+  next="$(jq -r --arg cluster "$cluster" '
+    .order as $order
+    | ($order | index($cluster)) as $i
+    | if $i != null and $i < (($order | length) - 1) then $order[$i + 1] else empty end
+  ' "$spec")"
+
+  {
+    printf '# %s\n\n' "$title"
+    printf 'Cluster: `%s`\n\n' "$cluster"
+
+    printf '## Exercises\n\n'
+    while IFS= read -r exercise; do
+      printf -- '- [%s](%s/)\n' "$exercise" "$exercise"
+    done < <(cluster_exercises "$cluster")
+
+    printf '\n## References\n\n'
+    refs="$(jq -r --arg cluster "$cluster" '
+      .clusters[$cluster].refs
+      | to_entries[]
+      | .key as $source
+      | .value[]
+      | [$source, .]
+      | @tsv
+    ' "$spec")"
+
+    if [[ -n "$refs" ]]; then
+      printf '| Source | Node |\n'
+      printf '| --- | --- |\n'
+      while IFS=$'\t' read -r source node; do
+        printf '| `%s` | %s |\n' "$source" "$node"
+      done <<< "$refs"
+    else
+      printf '_No references mapped yet._\n'
+    fi
+
+    printf '\n## Navigation\n\n'
+    if [[ -n "$prev" ]]; then
+      printf -- '- Previous: [%s](../%s/)\n' "$(cluster_title "$prev")" "$(cluster_path_name "$prev")"
+    fi
+    if [[ -n "$next" ]]; then
+      printf -- '- Next: [%s](../%s/)\n' "$(cluster_title "$next")" "$(cluster_path_name "$next")"
+    fi
+  } > "$dir/index.md"
+
+  printf '==> wrote %s\n' "$dir/index.md" >&2
+}
+
+generate_indexes() {
+  local cluster="${1:-}"
+  generate_root_index
+
+  if [[ -n "$cluster" && "$cluster" != "--all" ]]; then
+    generate_cluster_index "$cluster"
+    return
+  fi
+
+  while IFS= read -r cluster; do
+    generate_cluster_index "$cluster"
+  done < <(ordered_clusters)
+}
+
+validate_spec() {
+  local failed=0
+
+  jq -e '
+    (.order | length) == (.order | unique | length)
+    and ([.clusters | keys[]] - .order | length == 0)
+    and ([.order[]] - (.clusters | keys) | length == 0)
+    and ([.clusters[].exercises[]] | length) == ([.clusters[].exercises[]] | unique | length)
+  ' "$spec" >/dev/null || failed=1
+
+  if (( failed )); then
+    die 'spec validation failed: order/clusters/exercises are inconsistent'
+  fi
+}
+
+validate_projection() {
+  local root cluster dir exercise exdir failed=0
+  root="$(projection_root)"
+
+  while IFS= read -r cluster; do
+    dir="$root/$(cluster_path_name "$cluster")"
+
+    [[ -d "$dir" ]] || {
+      printf 'missing cluster dir: %s\n' "$dir" >&2
+      failed=1
+      continue
+    }
+
+    if [[ -d "$root/$cluster" ]]; then
+      printf 'stale unprefixed cluster dir: %s\n' "$root/$cluster" >&2
+      failed=1
+    fi
+
+    while IFS= read -r exercise; do
+      exdir="$dir/$exercise"
+      [[ -d "$exdir" ]] || { printf 'missing exercise dir: %s\n' "$exdir" >&2; failed=1; continue; }
+      [[ -f "$exdir/.docs/instructions.md" ]] || { printf 'missing instructions: %s\n' "$exdir" >&2; failed=1; }
+      [[ -f "$exdir/.meta/config.json" ]] || { printf 'missing config: %s\n' "$exdir" >&2; failed=1; }
+      compgen -G "$exdir/*.bats" >/dev/null || { printf 'missing bats test: %s\n' "$exdir" >&2; failed=1; }
+      compgen -G "$exdir/*.sh" >/dev/null || { printf 'missing shell stub: %s\n' "$exdir" >&2; failed=1; }
+    done < <(cluster_exercises "$cluster")
+  done < <(ordered_clusters)
+
+  (( failed == 0 )) || die 'projection validation failed'
+}
+
 cmd="${1:-}"
 cluster="${2:-}"
 
-[[ -n "$cmd" ]] || {
-  usage
-  exit 2
-}
-
+[[ -n "$cmd" ]] || { usage; exit 2; }
 need_spec
 
 case "$cmd" in
+  clusters)
+    while IFS= read -r cluster; do
+      printf '%02d\t%s\t%s\t%s exercises\n' \
+        "$(cluster_ordinal "$cluster")" \
+        "$(cluster_path_name "$cluster")" \
+        "$(cluster_title "$cluster")" \
+        "$(cluster_count "$cluster")"
+    done < <(ordered_clusters)
+    ;;
+
   list)
-    [[ -n "$cluster" ]] || { usage; exit 2; }
-    cluster_exists "$cluster"
+    need_cluster "$cluster"
     cluster_exercises "$cluster"
     ;;
 
   refs)
-    [[ -n "$cluster" ]] || { usage; exit 2; }
-    cluster_exists "$cluster"
+    need_cluster "$cluster"
     jq -r --arg cluster "$cluster" '
       .clusters[$cluster].refs
       | to_entries[]
@@ -67,26 +298,25 @@ case "$cmd" in
     ;;
 
   next)
-    [[ -n "$cluster" ]] || { usage; exit 2; }
+    need_cluster "$cluster"
     jq -r --arg cluster "$cluster" '
       .order as $order
       | ($order | index($cluster)) as $i
-      | if $i == null then
-          error("unknown cluster: " + $cluster)
-        else
-          {
-            previous: (if $i > 0 then $order[$i - 1] else null end),
-            current: $cluster,
-            next: (if $i < (($order | length) - 1) then $order[$i + 1] else null end)
-          }
-        end
+      | {
+          previous: (if $i > 0 then $order[$i - 1] else null end),
+          current: $cluster,
+          next: (if $i < (($order | length) - 1) then $order[$i + 1] else null end)
+        }
     ' "$spec"
     ;;
 
-  download)
-    [[ -n "$cluster" ]] || { usage; exit 2; }
-    cluster_exists "$cluster"
+  path)
+    need_cluster "$cluster"
+    cluster_path_name "$cluster"
+    ;;
 
+  download)
+    need_cluster "$cluster"
     while IFS= read -r exercise; do
       printf '==> exercism download --track=bash --exercise=%s\n' "$exercise" >&2
       exercism download --track=bash --exercise="$exercise"
@@ -94,30 +324,29 @@ case "$cmd" in
     ;;
 
   copy)
-    [[ -n "$cluster" ]] || { usage; exit 2; }
-    cluster_exists "$cluster"
+    copy_cluster "$cluster"
+    ;;
 
-    : "${BASH_TRACK_REPO:?set BASH_TRACK_REPO to official exercism/bash clone}"
-    : "${BASH_LOCAL_REPO:?set BASH_LOCAL_REPO to your sorted local repo}"
+  project)
+    if [[ -n "$cluster" ]]; then
+      copy_cluster "$cluster"
+      generate_indexes "$cluster"
+    else
+      while IFS= read -r cluster; do
+        copy_cluster "$cluster"
+      done < <(ordered_clusters)
+      generate_indexes --all
+    fi
+    ;;
 
-    src_root="$BASH_TRACK_REPO/exercises/practice"
-    dst_root="$BASH_LOCAL_REPO/bash/$cluster"
+  index)
+    generate_indexes "${cluster:---all}"
+    ;;
 
-    mkdir -p "$dst_root"
-
-    while IFS= read -r exercise; do
-      src="$src_root/$exercise"
-      dst="$dst_root/$exercise"
-
-      [[ -d "$src" ]] || {
-        printf 'missing source exercise: %s\n' "$src" >&2
-        exit 1
-      }
-
-      printf '==> copy %s -> %s\n' "$src" "$dst" >&2
-      mkdir -p "$dst"
-      rsync -a --delete "$src/" "$dst/"
-    done < <(cluster_exercises "$cluster")
+  validate)
+    validate_spec
+    validate_projection
+    printf 'ok: bash cluster spec and projection are valid\n'
     ;;
 
   *)
