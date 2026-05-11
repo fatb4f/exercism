@@ -1,0 +1,2913 @@
+{
+  "version": 1,
+  "track": "bash",
+  "reference_model": "inherited-cluster-refs-plus-optional-exercise-overlays",
+  "exercises": {
+    "hello-world": {
+      "cluster": "script-contract",
+      "cluster_title": "Script contract / args / stdout / stderr / status",
+      "cluster_directory": "01-script-contract",
+      "refs": {
+        "bash-manual": [
+          "shell-scripts",
+          "shell-parameters",
+          "special-parameters",
+          "exit-status",
+          "bourne-shell-builtins",
+          "bash-builtins"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "parameters",
+          "tests-and-conditionals",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2086"
+        ],
+        "google-bash-guide": [
+          "shell-files-and-interpreter-invocation",
+          "comments",
+          "stdout-vs-stderr",
+          "checking-return-values"
+        ]
+      }
+    },
+    "two-fer": {
+      "cluster": "script-contract",
+      "cluster_title": "Script contract / args / stdout / stderr / status",
+      "cluster_directory": "01-script-contract",
+      "refs": {
+        "bash-manual": [
+          "shell-scripts",
+          "shell-parameters",
+          "special-parameters",
+          "exit-status",
+          "bourne-shell-builtins",
+          "bash-builtins"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "parameters",
+          "tests-and-conditionals",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2086"
+        ],
+        "google-bash-guide": [
+          "shell-files-and-interpreter-invocation",
+          "comments",
+          "stdout-vs-stderr",
+          "checking-return-values"
+        ]
+      }
+    },
+    "error-handling": {
+      "cluster": "script-contract",
+      "cluster_title": "Script contract / args / stdout / stderr / status",
+      "cluster_directory": "01-script-contract",
+      "refs": {
+        "bash-manual": [
+          "shell-scripts",
+          "shell-parameters",
+          "special-parameters",
+          "exit-status",
+          "bourne-shell-builtins",
+          "bash-builtins"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "parameters",
+          "tests-and-conditionals",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2086"
+        ],
+        "google-bash-guide": [
+          "shell-files-and-interpreter-invocation",
+          "comments",
+          "stdout-vs-stderr",
+          "checking-return-values"
+        ]
+      },
+      "exercise_refs": {
+        "bash-manual": [
+          "exit-status"
+        ],
+        "google-bash-guide": [
+          "stdout-vs-stderr",
+          "checking-return-values"
+        ]
+      }
+    },
+    "bob": {
+      "cluster": "script-contract",
+      "cluster_title": "Script contract / args / stdout / stderr / status",
+      "cluster_directory": "01-script-contract",
+      "refs": {
+        "bash-manual": [
+          "shell-scripts",
+          "shell-parameters",
+          "special-parameters",
+          "exit-status",
+          "bourne-shell-builtins",
+          "bash-builtins"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "parameters",
+          "tests-and-conditionals",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2086"
+        ],
+        "google-bash-guide": [
+          "shell-files-and-interpreter-invocation",
+          "comments",
+          "stdout-vs-stderr",
+          "checking-return-values"
+        ]
+      },
+      "exercise_refs": {
+        "bash-manual": [
+          "conditional-constructs",
+          "pattern-matching"
+        ],
+        "google-bash-guide": [
+          "quoting",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "raindrops": {
+      "cluster": "script-contract",
+      "cluster_title": "Script contract / args / stdout / stderr / status",
+      "cluster_directory": "01-script-contract",
+      "refs": {
+        "bash-manual": [
+          "shell-scripts",
+          "shell-parameters",
+          "special-parameters",
+          "exit-status",
+          "bourne-shell-builtins",
+          "bash-builtins"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "parameters",
+          "tests-and-conditionals",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2086"
+        ],
+        "google-bash-guide": [
+          "shell-files-and-interpreter-invocation",
+          "comments",
+          "stdout-vs-stderr",
+          "checking-return-values"
+        ]
+      }
+    },
+    "line-up": {
+      "cluster": "script-contract",
+      "cluster_title": "Script contract / args / stdout / stderr / status",
+      "cluster_directory": "01-script-contract",
+      "refs": {
+        "bash-manual": [
+          "shell-scripts",
+          "shell-parameters",
+          "special-parameters",
+          "exit-status",
+          "bourne-shell-builtins",
+          "bash-builtins"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "parameters",
+          "tests-and-conditionals",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2086"
+        ],
+        "google-bash-guide": [
+          "shell-files-and-interpreter-invocation",
+          "comments",
+          "stdout-vs-stderr",
+          "checking-return-values"
+        ]
+      }
+    },
+    "reverse-string": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "acronym": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "anagram": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "isogram": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "pangram": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "phone-number": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      },
+      "exercise_refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching"
+        ],
+        "shellcheck": [
+          "SC2086"
+        ],
+        "google-bash-guide": [
+          "quoting",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "pig-latin": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "word-count": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      },
+      "exercise_refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "arrays"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ]
+      }
+    },
+    "run-length-encoding": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "transpose": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "rotational-cipher": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "atbash-cipher": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "affine-cipher": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "simple-cipher": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "rail-fence-cipher": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "crypto-square": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "markdown": {
+      "cluster": "string-normalization",
+      "cluster_title": "String normalization / text transformation / ciphers",
+      "cluster_directory": "02-string-normalization",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      }
+    },
+    "armstrong-numbers": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "difference-of-squares": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "grains": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "collatz-conjecture": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "darts": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "dnd-character": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "eliuds-eggs": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      },
+      "exercise_refs": {
+        "bash-manual": [
+          "shell-arithmetic"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ]
+      }
+    },
+    "largest-series-product": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "perfect-numbers": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "prime-factors": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "sieve": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "space-age": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "square-root": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "all-your-base": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "luhn": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      },
+      "exercise_refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "shell-parameter-expansion"
+        ],
+        "google-bash-guide": [
+          "arithmetic"
+        ]
+      }
+    },
+    "isbn-verifier": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "roman-numerals": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "rational-numbers": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "diffie-hellman": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "secret-handshake": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "variable-length-quantity": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "pythagorean-triplet": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "palindrome-products": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "nth-prime": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "change": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "scrabble-score": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "sum-of-multiples": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "clock": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "leap": {
+      "cluster": "arithmetic",
+      "cluster_title": "Arithmetic / integers / bit operations",
+      "cluster_directory": "03-arithmetic",
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      }
+    },
+    "allergies": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "resistor-color": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "resistor-color-duo": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "resistor-color-trio": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "house": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "kindergarten-garden": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "pascals-triangle": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "list-ops": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "sublist": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "tournament": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "protein-translation": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "rna-transcription": {
+      "cluster": "arrays-collections",
+      "cluster_title": "Arrays / lookup tables / collections",
+      "cluster_directory": "04-arrays-collections",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "grep": {
+      "cluster": "line-io-parsing",
+      "cluster_title": "Parsing / line I/O / grammar-ish problems",
+      "cluster_directory": "05-line-io-parsing",
+      "refs": {
+        "bash-manual": [
+          "read-builtin",
+          "ifs",
+          "redirections",
+          "pipelines",
+          "here-strings",
+          "pattern-matching",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "input-and-output",
+          "patterns",
+          "bashfaq-001",
+          "bashfaq-020",
+          "bashfaq-040"
+        ],
+        "shellcheck": [
+          "SC2162",
+          "SC2030",
+          "SC2031",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "pipes-to-while",
+          "command-substitution",
+          "pipelines",
+          "quoting"
+        ]
+      },
+      "exercise_refs": {
+        "bash-manual": [
+          "shell-scripts",
+          "shell-parameters",
+          "pattern-matching"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "input-and-output"
+        ],
+        "google-bash-guide": [
+          "calling-commands",
+          "quoting"
+        ]
+      }
+    },
+    "wordy": {
+      "cluster": "line-io-parsing",
+      "cluster_title": "Parsing / line I/O / grammar-ish problems",
+      "cluster_directory": "05-line-io-parsing",
+      "refs": {
+        "bash-manual": [
+          "read-builtin",
+          "ifs",
+          "redirections",
+          "pipelines",
+          "here-strings",
+          "pattern-matching",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "input-and-output",
+          "patterns",
+          "bashfaq-001",
+          "bashfaq-020",
+          "bashfaq-040"
+        ],
+        "shellcheck": [
+          "SC2162",
+          "SC2030",
+          "SC2031",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "pipes-to-while",
+          "command-substitution",
+          "pipelines",
+          "quoting"
+        ]
+      }
+    },
+    "matching-brackets": {
+      "cluster": "line-io-parsing",
+      "cluster_title": "Parsing / line I/O / grammar-ish problems",
+      "cluster_directory": "05-line-io-parsing",
+      "refs": {
+        "bash-manual": [
+          "read-builtin",
+          "ifs",
+          "redirections",
+          "pipelines",
+          "here-strings",
+          "pattern-matching",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "input-and-output",
+          "patterns",
+          "bashfaq-001",
+          "bashfaq-020",
+          "bashfaq-040"
+        ],
+        "shellcheck": [
+          "SC2162",
+          "SC2030",
+          "SC2031",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "pipes-to-while",
+          "command-substitution",
+          "pipelines",
+          "quoting"
+        ]
+      }
+    },
+    "series": {
+      "cluster": "line-io-parsing",
+      "cluster_title": "Parsing / line I/O / grammar-ish problems",
+      "cluster_directory": "05-line-io-parsing",
+      "refs": {
+        "bash-manual": [
+          "read-builtin",
+          "ifs",
+          "redirections",
+          "pipelines",
+          "here-strings",
+          "pattern-matching",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "input-and-output",
+          "patterns",
+          "bashfaq-001",
+          "bashfaq-020",
+          "bashfaq-040"
+        ],
+        "shellcheck": [
+          "SC2162",
+          "SC2030",
+          "SC2031",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "pipes-to-while",
+          "command-substitution",
+          "pipelines",
+          "quoting"
+        ]
+      }
+    },
+    "nucleotide-count": {
+      "cluster": "line-io-parsing",
+      "cluster_title": "Parsing / line I/O / grammar-ish problems",
+      "cluster_directory": "05-line-io-parsing",
+      "refs": {
+        "bash-manual": [
+          "read-builtin",
+          "ifs",
+          "redirections",
+          "pipelines",
+          "here-strings",
+          "pattern-matching",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "input-and-output",
+          "patterns",
+          "bashfaq-001",
+          "bashfaq-020",
+          "bashfaq-040"
+        ],
+        "shellcheck": [
+          "SC2162",
+          "SC2030",
+          "SC2031",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "pipes-to-while",
+          "command-substitution",
+          "pipelines",
+          "quoting"
+        ]
+      }
+    },
+    "hamming": {
+      "cluster": "line-io-parsing",
+      "cluster_title": "Parsing / line I/O / grammar-ish problems",
+      "cluster_directory": "05-line-io-parsing",
+      "refs": {
+        "bash-manual": [
+          "read-builtin",
+          "ifs",
+          "redirections",
+          "pipelines",
+          "here-strings",
+          "pattern-matching",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "input-and-output",
+          "patterns",
+          "bashfaq-001",
+          "bashfaq-020",
+          "bashfaq-040"
+        ],
+        "shellcheck": [
+          "SC2162",
+          "SC2030",
+          "SC2031",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "pipes-to-while",
+          "command-substitution",
+          "pipelines",
+          "quoting"
+        ]
+      }
+    },
+    "gigasecond": {
+      "cluster": "external-commands",
+      "cluster_title": "Dates / external command boundary",
+      "cluster_directory": "06-external-commands",
+      "refs": {
+        "bash-manual": [
+          "executing-commands",
+          "command-search-and-execution",
+          "command-substitution",
+          "exit-status",
+          "pipelines"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "input-and-output",
+          "bashfaq-028",
+          "bashfaq-086"
+        ],
+        "shellcheck": [
+          "SC2046",
+          "SC2155"
+        ],
+        "google-bash-guide": [
+          "calling-commands",
+          "checking-return-values",
+          "command-substitution"
+        ]
+      }
+    },
+    "meetup": {
+      "cluster": "external-commands",
+      "cluster_title": "Dates / external command boundary",
+      "cluster_directory": "06-external-commands",
+      "refs": {
+        "bash-manual": [
+          "executing-commands",
+          "command-search-and-execution",
+          "command-substitution",
+          "exit-status",
+          "pipelines"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "input-and-output",
+          "bashfaq-028",
+          "bashfaq-086"
+        ],
+        "shellcheck": [
+          "SC2046",
+          "SC2155"
+        ],
+        "google-bash-guide": [
+          "calling-commands",
+          "checking-return-values",
+          "command-substitution"
+        ]
+      }
+    },
+    "bottle-song": {
+      "cluster": "text-generation",
+      "cluster_title": "Text generation / formatting songs",
+      "cluster_directory": "07-text-generation",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "arrays",
+          "looping-constructs",
+          "printf",
+          "quoting"
+        ],
+        "wooledge": [
+          "parameters",
+          "arrays",
+          "practices",
+          "bashfaq-013"
+        ],
+        "shellcheck": [
+          "SC2059",
+          "SC2145",
+          "SC2068"
+        ],
+        "google-bash-guide": [
+          "line-length-and-long-strings",
+          "quoting",
+          "functions"
+        ]
+      }
+    },
+    "food-chain": {
+      "cluster": "text-generation",
+      "cluster_title": "Text generation / formatting songs",
+      "cluster_directory": "07-text-generation",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "arrays",
+          "looping-constructs",
+          "printf",
+          "quoting"
+        ],
+        "wooledge": [
+          "parameters",
+          "arrays",
+          "practices",
+          "bashfaq-013"
+        ],
+        "shellcheck": [
+          "SC2059",
+          "SC2145",
+          "SC2068"
+        ],
+        "google-bash-guide": [
+          "line-length-and-long-strings",
+          "quoting",
+          "functions"
+        ]
+      }
+    },
+    "proverb": {
+      "cluster": "text-generation",
+      "cluster_title": "Text generation / formatting songs",
+      "cluster_directory": "07-text-generation",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "arrays",
+          "looping-constructs",
+          "printf",
+          "quoting"
+        ],
+        "wooledge": [
+          "parameters",
+          "arrays",
+          "practices",
+          "bashfaq-013"
+        ],
+        "shellcheck": [
+          "SC2059",
+          "SC2145",
+          "SC2068"
+        ],
+        "google-bash-guide": [
+          "line-length-and-long-strings",
+          "quoting",
+          "functions"
+        ]
+      }
+    },
+    "twelve-days": {
+      "cluster": "text-generation",
+      "cluster_title": "Text generation / formatting songs",
+      "cluster_directory": "07-text-generation",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "arrays",
+          "looping-constructs",
+          "printf",
+          "quoting"
+        ],
+        "wooledge": [
+          "parameters",
+          "arrays",
+          "practices",
+          "bashfaq-013"
+        ],
+        "shellcheck": [
+          "SC2059",
+          "SC2145",
+          "SC2068"
+        ],
+        "google-bash-guide": [
+          "line-length-and-long-strings",
+          "quoting",
+          "functions"
+        ]
+      }
+    },
+    "say": {
+      "cluster": "text-generation",
+      "cluster_title": "Text generation / formatting songs",
+      "cluster_directory": "07-text-generation",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "arrays",
+          "looping-constructs",
+          "printf",
+          "quoting"
+        ],
+        "wooledge": [
+          "parameters",
+          "arrays",
+          "practices",
+          "bashfaq-013"
+        ],
+        "shellcheck": [
+          "SC2059",
+          "SC2145",
+          "SC2068"
+        ],
+        "google-bash-guide": [
+          "line-length-and-long-strings",
+          "quoting",
+          "functions"
+        ]
+      }
+    },
+    "diamond": {
+      "cluster": "text-generation",
+      "cluster_title": "Text generation / formatting songs",
+      "cluster_directory": "07-text-generation",
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "arrays",
+          "looping-constructs",
+          "printf",
+          "quoting"
+        ],
+        "wooledge": [
+          "parameters",
+          "arrays",
+          "practices",
+          "bashfaq-013"
+        ],
+        "shellcheck": [
+          "SC2059",
+          "SC2145",
+          "SC2068"
+        ],
+        "google-bash-guide": [
+          "line-length-and-long-strings",
+          "quoting",
+          "functions"
+        ]
+      }
+    },
+    "flower-field": {
+      "cluster": "matrix-grid",
+      "cluster_title": "Matrix / grid / spatial indexing",
+      "cluster_directory": "08-matrix-grid",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs",
+          "pattern-matching"
+        ],
+        "wooledge": [
+          "arrays",
+          "tests-and-conditionals",
+          "compound-commands"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2154"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "ocr-numbers": {
+      "cluster": "matrix-grid",
+      "cluster_title": "Matrix / grid / spatial indexing",
+      "cluster_directory": "08-matrix-grid",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs",
+          "pattern-matching"
+        ],
+        "wooledge": [
+          "arrays",
+          "tests-and-conditionals",
+          "compound-commands"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2154"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "rectangles": {
+      "cluster": "matrix-grid",
+      "cluster_title": "Matrix / grid / spatial indexing",
+      "cluster_directory": "08-matrix-grid",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs",
+          "pattern-matching"
+        ],
+        "wooledge": [
+          "arrays",
+          "tests-and-conditionals",
+          "compound-commands"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2154"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "spiral-matrix": {
+      "cluster": "matrix-grid",
+      "cluster_title": "Matrix / grid / spatial indexing",
+      "cluster_directory": "08-matrix-grid",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs",
+          "pattern-matching"
+        ],
+        "wooledge": [
+          "arrays",
+          "tests-and-conditionals",
+          "compound-commands"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2154"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "queen-attack": {
+      "cluster": "matrix-grid",
+      "cluster_title": "Matrix / grid / spatial indexing",
+      "cluster_directory": "08-matrix-grid",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs",
+          "pattern-matching"
+        ],
+        "wooledge": [
+          "arrays",
+          "tests-and-conditionals",
+          "compound-commands"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2154"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "triangle": {
+      "cluster": "matrix-grid",
+      "cluster_title": "Matrix / grid / spatial indexing",
+      "cluster_directory": "08-matrix-grid",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs",
+          "pattern-matching"
+        ],
+        "wooledge": [
+          "arrays",
+          "tests-and-conditionals",
+          "compound-commands"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2154"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "use-local-variables",
+          "functions"
+        ]
+      }
+    },
+    "robot-simulator": {
+      "cluster": "state-machines",
+      "cluster_title": "State machines / simulation / games",
+      "cluster_directory": "09-state-machines",
+      "refs": {
+        "bash-manual": [
+          "conditional-constructs",
+          "shell-arithmetic",
+          "shell-functions",
+          "shell-parameters",
+          "arrays"
+        ],
+        "wooledge": [
+          "tests-and-conditionals",
+          "compound-commands",
+          "parameters",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "functions",
+          "use-local-variables",
+          "checking-return-values",
+          "main"
+        ]
+      }
+    },
+    "bowling": {
+      "cluster": "state-machines",
+      "cluster_title": "State machines / simulation / games",
+      "cluster_directory": "09-state-machines",
+      "refs": {
+        "bash-manual": [
+          "conditional-constructs",
+          "shell-arithmetic",
+          "shell-functions",
+          "shell-parameters",
+          "arrays"
+        ],
+        "wooledge": [
+          "tests-and-conditionals",
+          "compound-commands",
+          "parameters",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "functions",
+          "use-local-variables",
+          "checking-return-values",
+          "main"
+        ]
+      }
+    },
+    "poker": {
+      "cluster": "state-machines",
+      "cluster_title": "State machines / simulation / games",
+      "cluster_directory": "09-state-machines",
+      "refs": {
+        "bash-manual": [
+          "conditional-constructs",
+          "shell-arithmetic",
+          "shell-functions",
+          "shell-parameters",
+          "arrays"
+        ],
+        "wooledge": [
+          "tests-and-conditionals",
+          "compound-commands",
+          "parameters",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "functions",
+          "use-local-variables",
+          "checking-return-values",
+          "main"
+        ]
+      }
+    },
+    "yacht": {
+      "cluster": "state-machines",
+      "cluster_title": "State machines / simulation / games",
+      "cluster_directory": "09-state-machines",
+      "refs": {
+        "bash-manual": [
+          "conditional-constructs",
+          "shell-arithmetic",
+          "shell-functions",
+          "shell-parameters",
+          "arrays"
+        ],
+        "wooledge": [
+          "tests-and-conditionals",
+          "compound-commands",
+          "parameters",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "functions",
+          "use-local-variables",
+          "checking-return-values",
+          "main"
+        ]
+      }
+    },
+    "two-bucket": {
+      "cluster": "state-machines",
+      "cluster_title": "State machines / simulation / games",
+      "cluster_directory": "09-state-machines",
+      "refs": {
+        "bash-manual": [
+          "conditional-constructs",
+          "shell-arithmetic",
+          "shell-functions",
+          "shell-parameters",
+          "arrays"
+        ],
+        "wooledge": [
+          "tests-and-conditionals",
+          "compound-commands",
+          "parameters",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "functions",
+          "use-local-variables",
+          "checking-return-values",
+          "main"
+        ]
+      }
+    },
+    "satellite": {
+      "cluster": "state-machines",
+      "cluster_title": "State machines / simulation / games",
+      "cluster_directory": "09-state-machines",
+      "refs": {
+        "bash-manual": [
+          "conditional-constructs",
+          "shell-arithmetic",
+          "shell-functions",
+          "shell-parameters",
+          "arrays"
+        ],
+        "wooledge": [
+          "tests-and-conditionals",
+          "compound-commands",
+          "parameters",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "functions",
+          "use-local-variables",
+          "checking-return-values",
+          "main"
+        ]
+      }
+    },
+    "forth": {
+      "cluster": "state-machines",
+      "cluster_title": "State machines / simulation / games",
+      "cluster_directory": "09-state-machines",
+      "refs": {
+        "bash-manual": [
+          "conditional-constructs",
+          "shell-arithmetic",
+          "shell-functions",
+          "shell-parameters",
+          "arrays"
+        ],
+        "wooledge": [
+          "tests-and-conditionals",
+          "compound-commands",
+          "parameters",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "functions",
+          "use-local-variables",
+          "checking-return-values",
+          "main"
+        ]
+      }
+    },
+    "binary-search": {
+      "cluster": "search-optimization",
+      "cluster_title": "Search / optimization / data structures",
+      "cluster_directory": "10-search-optimization",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "compound-commands",
+          "tests-and-conditionals"
+        ],
+        "shellcheck": [
+          "SC2128",
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "functions"
+        ]
+      }
+    },
+    "knapsack": {
+      "cluster": "search-optimization",
+      "cluster_title": "Search / optimization / data structures",
+      "cluster_directory": "10-search-optimization",
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "compound-commands",
+          "tests-and-conditionals"
+        ],
+        "shellcheck": [
+          "SC2128",
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "functions"
+        ]
+      }
+    }
+  }
+}

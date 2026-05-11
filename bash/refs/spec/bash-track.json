@@ -1,0 +1,616 @@
+{
+  "version": 1,
+  "track": "bash",
+  "surface": "exercism-bash-progression",
+  "reference_model": "upstream-link-first",
+  "order": [
+    "script-contract",
+    "string-normalization",
+    "arithmetic",
+    "arrays-collections",
+    "line-io-parsing",
+    "external-commands",
+    "text-generation",
+    "matrix-grid",
+    "state-machines",
+    "search-optimization"
+  ],
+  "clusters": {
+    "script-contract": {
+      "title": "Script contract / args / stdout / stderr / status",
+      "short_title": "Script contract",
+      "pattern": "These exercises teach the process boundary: input arrives as args, output goes to stdout/stderr, correctness is exit status + text.",
+      "exercises": [
+        "hello-world",
+        "two-fer",
+        "error-handling",
+        "bob",
+        "raindrops",
+        "line-up"
+      ],
+      "refs": {
+        "bash-manual": [
+          "shell-scripts",
+          "shell-parameters",
+          "special-parameters",
+          "exit-status",
+          "bourne-shell-builtins",
+          "bash-builtins"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "parameters",
+          "tests-and-conditionals",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2086"
+        ],
+        "google-bash-guide": [
+          "shell-files-and-interpreter-invocation",
+          "comments",
+          "stdout-vs-stderr",
+          "checking-return-values"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "$@ quoting",
+          "exit-code handling",
+          "stdout/stderr separation"
+        ]
+      },
+      "exercise_refs": {
+        "error-handling": {
+          "bash-manual": [
+            "exit-status"
+          ],
+          "google-bash-guide": [
+            "stdout-vs-stderr",
+            "checking-return-values"
+          ]
+        },
+        "bob": {
+          "bash-manual": [
+            "conditional-constructs",
+            "pattern-matching"
+          ],
+          "google-bash-guide": [
+            "quoting",
+            "test-and-conditionals"
+          ]
+        }
+      },
+      "order": 1,
+      "directory": "01-script-contract"
+    },
+    "string-normalization": {
+      "title": "String normalization / text transformation / ciphers",
+      "short_title": "String normalization",
+      "pattern": "This is the dominant Bash-learning surface: normalize text, compare text, transform text, avoid word-splitting traps.",
+      "exercises": [
+        "reverse-string",
+        "acronym",
+        "anagram",
+        "isogram",
+        "pangram",
+        "phone-number",
+        "pig-latin",
+        "word-count",
+        "run-length-encoding",
+        "transpose",
+        "rotational-cipher",
+        "atbash-cipher",
+        "affine-cipher",
+        "simple-cipher",
+        "rail-fence-cipher",
+        "crypto-square",
+        "markdown"
+      ],
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "pattern-matching",
+          "quote-removal",
+          "conditional-constructs",
+          "arrays"
+        ],
+        "wooledge": [
+          "parameters",
+          "patterns",
+          "tests-and-conditionals",
+          "bashfaq-073",
+          "bash-pitfalls"
+        ],
+        "shellcheck": [
+          "SC2086",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "variable-expansion",
+          "quoting",
+          "command-substitution",
+          "test-and-conditionals"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "regex/glob confusion",
+          "quoting composite strings"
+        ]
+      },
+      "exercise_refs": {
+        "phone-number": {
+          "bash-manual": [
+            "shell-parameter-expansion",
+            "pattern-matching"
+          ],
+          "shellcheck": [
+            "SC2086"
+          ],
+          "google-bash-guide": [
+            "quoting",
+            "test-and-conditionals"
+          ]
+        },
+        "word-count": {
+          "bash-manual": [
+            "shell-parameter-expansion",
+            "arrays"
+          ],
+          "shellcheck": [
+            "SC2086",
+            "SC2046"
+          ]
+        }
+      },
+      "order": 2,
+      "directory": "02-string-normalization"
+    },
+    "arithmetic": {
+      "title": "Arithmetic / integers / bit operations",
+      "short_title": "Arithmetic",
+      "pattern": "These exercises are algorithmic shells around integer math; they need Bash arithmetic semantics more than external tools.",
+      "exercises": [
+        "armstrong-numbers",
+        "difference-of-squares",
+        "grains",
+        "collatz-conjecture",
+        "darts",
+        "dnd-character",
+        "eliuds-eggs",
+        "largest-series-product",
+        "perfect-numbers",
+        "prime-factors",
+        "sieve",
+        "space-age",
+        "square-root",
+        "all-your-base",
+        "luhn",
+        "isbn-verifier",
+        "roman-numerals",
+        "rational-numbers",
+        "diffie-hellman",
+        "secret-handshake",
+        "variable-length-quantity",
+        "pythagorean-triplet",
+        "palindrome-products",
+        "nth-prime",
+        "change",
+        "scrabble-score",
+        "sum-of-multiples",
+        "clock",
+        "leap"
+      ],
+      "refs": {
+        "bash-manual": [
+          "shell-arithmetic",
+          "arithmetic-expansion",
+          "bash-conditional-expressions",
+          "arrays",
+          "shell-variables"
+        ],
+        "wooledge": [
+          "compound-commands",
+          "tests-and-conditionals",
+          "bashfaq-022",
+          "bashfaq-070"
+        ],
+        "shellcheck": [
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arithmetic",
+          "test-and-conditionals",
+          "use-local-variables",
+          "checking-return-values"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "arithmetic quoting",
+          "leading-zero/octal traps",
+          "numeric/string comparison mixups"
+        ]
+      },
+      "exercise_refs": {
+        "eliuds-eggs": {
+          "bash-manual": [
+            "shell-arithmetic"
+          ],
+          "shellcheck": [
+            "SC2004"
+          ]
+        },
+        "luhn": {
+          "bash-manual": [
+            "shell-arithmetic",
+            "shell-parameter-expansion"
+          ],
+          "google-bash-guide": [
+            "arithmetic"
+          ]
+        }
+      },
+      "order": 3,
+      "directory": "03-arithmetic"
+    },
+    "arrays-collections": {
+      "title": "Arrays / lookup tables / collections",
+      "short_title": "Arrays / collections",
+      "pattern": "Once exercises require lookup tables or indexed state, Bash arrays become the core reference lane.",
+      "exercises": [
+        "allergies",
+        "resistor-color",
+        "resistor-color-duo",
+        "resistor-color-trio",
+        "house",
+        "kindergarten-garden",
+        "pascals-triangle",
+        "list-ops",
+        "sublist",
+        "tournament",
+        "protein-translation",
+        "rna-transcription"
+      ],
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-parameter-expansion",
+          "compound-commands",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "parameters",
+          "bashfaq-005",
+          "bashfaq-006",
+          "bashfaq-046"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2199"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "variable-names",
+          "use-local-variables",
+          "functions"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "array expansion",
+          "unquoted \"${array[@]}\"",
+          "accidental scalar/string flattening"
+        ]
+      },
+      "order": 4,
+      "directory": "04-arrays-collections"
+    },
+    "line-io-parsing": {
+      "title": "Parsing / line I/O / grammar-ish problems",
+      "short_title": "Line I/O / parsing",
+      "pattern": "These are the first exercises where Bash\u2019s stream model matters more than string variables.",
+      "exercises": [
+        "grep",
+        "wordy",
+        "matching-brackets",
+        "series",
+        "nucleotide-count",
+        "hamming"
+      ],
+      "refs": {
+        "bash-manual": [
+          "read-builtin",
+          "ifs",
+          "redirections",
+          "pipelines",
+          "here-strings",
+          "pattern-matching",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "input-and-output",
+          "patterns",
+          "bashfaq-001",
+          "bashfaq-020",
+          "bashfaq-040"
+        ],
+        "shellcheck": [
+          "SC2162",
+          "SC2030",
+          "SC2031",
+          "SC2046"
+        ],
+        "google-bash-guide": [
+          "pipes-to-while",
+          "command-substitution",
+          "pipelines",
+          "quoting"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "read -r",
+          "pipeline subshell state",
+          "command substitution splitting",
+          "unsafe grep parsing"
+        ]
+      },
+      "exercise_refs": {
+        "grep": {
+          "bash-manual": [
+            "shell-scripts",
+            "shell-parameters",
+            "pattern-matching"
+          ],
+          "wooledge": [
+            "commands-and-arguments",
+            "input-and-output"
+          ],
+          "google-bash-guide": [
+            "calling-commands",
+            "quoting"
+          ]
+        }
+      },
+      "order": 5,
+      "directory": "05-line-io-parsing"
+    },
+    "external-commands": {
+      "title": "Dates / external command boundary",
+      "short_title": "External commands",
+      "pattern": "These are not pure Bash exercises; the main lesson is controlling external utility boundaries.",
+      "exercises": [
+        "gigasecond",
+        "meetup"
+      ],
+      "refs": {
+        "bash-manual": [
+          "executing-commands",
+          "command-search-and-execution",
+          "command-substitution",
+          "exit-status",
+          "pipelines"
+        ],
+        "wooledge": [
+          "commands-and-arguments",
+          "input-and-output",
+          "bashfaq-028",
+          "bashfaq-086"
+        ],
+        "shellcheck": [
+          "SC2046",
+          "SC2155"
+        ],
+        "google-bash-guide": [
+          "calling-commands",
+          "checking-return-values",
+          "command-substitution"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "quote command substitution",
+          "check external command failures",
+          "avoid parsing fragile output"
+        ]
+      },
+      "order": 6,
+      "directory": "06-external-commands"
+    },
+    "text-generation": {
+      "title": "Text generation / formatting songs",
+      "short_title": "Text generation",
+      "pattern": "These are template-generation exercises; printf + arrays are the stable primitive set.",
+      "exercises": [
+        "bottle-song",
+        "food-chain",
+        "proverb",
+        "twelve-days",
+        "say",
+        "diamond"
+      ],
+      "refs": {
+        "bash-manual": [
+          "shell-parameter-expansion",
+          "arrays",
+          "looping-constructs",
+          "printf",
+          "quoting"
+        ],
+        "wooledge": [
+          "parameters",
+          "arrays",
+          "practices",
+          "bashfaq-013"
+        ],
+        "shellcheck": [
+          "SC2059",
+          "SC2145",
+          "SC2068"
+        ],
+        "google-bash-guide": [
+          "line-length-and-long-strings",
+          "quoting",
+          "functions"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "quoting",
+          "newline handling",
+          "echo vs printf",
+          "array expansion"
+        ]
+      },
+      "order": 7,
+      "directory": "07-text-generation"
+    },
+    "matrix-grid": {
+      "title": "Matrix / grid / spatial indexing",
+      "short_title": "Matrix / grid",
+      "pattern": "These naturally map to row/column indexing, nested loops, and careful array/string representation decisions.",
+      "exercises": [
+        "flower-field",
+        "ocr-numbers",
+        "rectangles",
+        "spiral-matrix",
+        "queen-attack",
+        "triangle"
+      ],
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs",
+          "pattern-matching"
+        ],
+        "wooledge": [
+          "arrays",
+          "tests-and-conditionals",
+          "compound-commands"
+        ],
+        "shellcheck": [
+          "SC2068",
+          "SC2128",
+          "SC2154"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "use-local-variables",
+          "functions"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "indexed-array quoting",
+          "arithmetic subscripts",
+          "off-by-one and empty expansion hazards"
+        ]
+      },
+      "order": 8,
+      "directory": "08-matrix-grid"
+    },
+    "state-machines": {
+      "title": "State machines / simulation / games",
+      "short_title": "State machines",
+      "pattern": "These force a small interpreter shape: parse command/event \u2192 update state \u2192 validate state \u2192 emit result.",
+      "exercises": [
+        "robot-simulator",
+        "bowling",
+        "poker",
+        "yacht",
+        "two-bucket",
+        "satellite",
+        "forth"
+      ],
+      "refs": {
+        "bash-manual": [
+          "conditional-constructs",
+          "shell-arithmetic",
+          "shell-functions",
+          "shell-parameters",
+          "arrays"
+        ],
+        "wooledge": [
+          "tests-and-conditionals",
+          "compound-commands",
+          "parameters",
+          "practices"
+        ],
+        "shellcheck": [
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "functions",
+          "use-local-variables",
+          "checking-return-values",
+          "main"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "uninitialized variables",
+          "branch coverage",
+          "unsafe comparisons",
+          "arithmetic/string mismatch"
+        ]
+      },
+      "order": 9,
+      "directory": "09-state-machines"
+    },
+    "search-optimization": {
+      "title": "Search / optimization / data structures",
+      "short_title": "Search / optimization",
+      "pattern": "These are algorithm exercises where Bash is a poor fit unless the representation is kept deliberately small.",
+      "exercises": [
+        "binary-search",
+        "knapsack"
+      ],
+      "refs": {
+        "bash-manual": [
+          "arrays",
+          "shell-arithmetic",
+          "looping-constructs",
+          "conditional-constructs"
+        ],
+        "wooledge": [
+          "arrays",
+          "compound-commands",
+          "tests-and-conditionals"
+        ],
+        "shellcheck": [
+          "SC2128",
+          "SC2154",
+          "SC2004"
+        ],
+        "google-bash-guide": [
+          "arrays",
+          "arithmetic",
+          "functions"
+        ]
+      },
+      "focus": {
+        "shellcheck": [
+          "array bounds",
+          "unset values",
+          "numeric comparisons"
+        ]
+      },
+      "order": 10,
+      "directory": "10-search-optimization"
+    }
+  },
+  "excluded_practice_exercises": [
+    "beer-song",
+    "minesweeper"
+  ]
+}

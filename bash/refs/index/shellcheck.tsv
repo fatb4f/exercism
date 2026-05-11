@@ -1,0 +1,15 @@
+code	source	upstream	description
+SC2004	shellcheck	https://www.shellcheck.net/wiki/SC2004	$/${} is unnecessary on arithmetic variables.
+SC2030	shellcheck	https://www.shellcheck.net/wiki/SC2030	Modification of a variable is local to the subshell caused by the pipeline.
+SC2031	shellcheck	https://www.shellcheck.net/wiki/SC2031	A variable was modified in a subshell, so the change may be lost.
+SC2046	shellcheck	https://www.shellcheck.net/wiki/SC2046	Quote command substitution output unless intentional splitting is required.
+SC2059	shellcheck	https://www.shellcheck.net/wiki/SC2059	Do not use variables in the printf format string; use a fixed format.
+SC2068	shellcheck	https://www.shellcheck.net/wiki/SC2068	Double quote array or parameter expansions to avoid re-splitting elements.
+SC2086	shellcheck	https://www.shellcheck.net/wiki/SC2086	Double quote to prevent globbing and word splitting.
+SC2128	shellcheck	https://www.shellcheck.net/wiki/SC2128	Expanding an array without an index only gives the first element.
+SC2145	shellcheck	https://www.shellcheck.net/wiki/SC2145	Argument mixes string and array; keep arguments separate or use the intended expansion.
+SC2154	shellcheck	https://www.shellcheck.net/wiki/SC2154	Variable is referenced but not assigned.
+SC2155	shellcheck	https://www.shellcheck.net/wiki/SC2155	Declare and assign separately to avoid masking return values.
+SC2162	shellcheck	https://www.shellcheck.net/wiki/SC2162	read without -r will mangle backslashes.
+SC2199	shellcheck	https://www.shellcheck.net/wiki/SC2199	Arrays implicitly concatenate in [[ ]]; compare elements explicitly.
+SC2206	shellcheck	https://www.shellcheck.net/wiki/SC2206	Quote to prevent word splitting/globbing, or split robustly with mapfile/read -a.

@@ -1,9 +1,0 @@
-{
-  "authors": [
-    "glennj"
-  ],
-  "contributors": [
-    "IsaacG"
-  ],
-  "blurb": "Bash control flow commands for branching, and the concept of truthiness"
-}

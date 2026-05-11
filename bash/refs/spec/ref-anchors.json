@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "providers": {
+    "bash-manual": {
+      "title": "GNU Bash Reference Manual",
+      "kind": "upstream-html-node",
+      "local_copy": false
+    },
+    "wooledge": {
+      "title": "Wooledge BashGuide / BashFAQ",
+      "kind": "upstream-wiki-page",
+      "local_copy": false
+    },
+    "shellcheck": {
+      "title": "ShellCheck",
+      "kind": "external-index",
+      "local_copy": false,
+      "index": "bash/refs/index/shellcheck.tsv"
+    },
+    "google-bash-guide": {
+      "title": "Google Shell Style Guide",
+      "kind": "upstream-html-heading",
+      "local_copy": false
+    }
+  },
+  "anchors": {
+    "bash-manual": {
+      "shell-scripts": {
+        "label": "Shell Scripts",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Shell-Scripts.html"
+      },
+      "shell-parameters": {
+        "label": "Shell Parameters",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html"
+      },
+      "special-parameters": {
+        "label": "Special Parameters",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html"
+      },
+      "shell-variables": {
+        "label": "Shell Variables",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Shell-Variables.html"
+      },
+      "shell-parameter-expansion": {
+        "label": "Shell Parameter Expansion",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html"
+      },
+      "command-substitution": {
+        "label": "Command Substitution",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html"
+      },
+      "arithmetic-expansion": {
+        "label": "Arithmetic Expansion",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html"
+      },
+      "word-splitting": {
+        "label": "Word Splitting",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html"
+      },
+      "quote-removal": {
+        "label": "Quote Removal",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Quote-Removal.html"
+      },
+      "pattern-matching": {
+        "label": "Pattern Matching",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html"
+      },
+      "quoting": {
+        "label": "Quoting",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Quoting.html"
+      },
+      "pipelines": {
+        "label": "Pipelines",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Pipelines.html"
+      },
+      "compound-commands": {
+        "label": "Compound Commands",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Compound-Commands.html"
+      },
+      "looping-constructs": {
+        "label": "Looping Constructs / for loop",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Looping-Constructs.html"
+      },
+      "conditional-constructs": {
+        "label": "Conditional Constructs / case",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Conditional-Constructs.html"
+      },
+      "bash-conditional-expressions": {
+        "label": "Bash Conditional Expressions",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html"
+      },
+      "arrays": {
+        "label": "Arrays",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Arrays.html"
+      },
+      "shell-arithmetic": {
+        "label": "Shell Arithmetic",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Shell-Arithmetic.html"
+      },
+      "redirections": {
+        "label": "Redirections",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Redirections.html"
+      },
+      "here-documents": {
+        "label": "Here Documents",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Here-Documents.html"
+      },
+      "here-strings": {
+        "label": "Here Strings",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Here-Strings.html"
+      },
+      "executing-commands": {
+        "label": "Executing Commands",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Executing-Commands.html"
+      },
+      "simple-command-expansion": {
+        "label": "Simple Command Expansion",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Simple-Command-Expansion.html"
+      },
+      "command-search-and-execution": {
+        "label": "Command Search and Execution",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Command-Search-and-Execution.html"
+      },
+      "command-execution-environment": {
+        "label": "Command Execution Environment",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Command-Execution-Environment.html"
+      },
+      "exit-status": {
+        "label": "Exit Status",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Exit-Status.html"
+      },
+      "shell-functions": {
+        "label": "Shell Functions",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Shell-Functions.html"
+      },
+      "bourne-shell-builtins": {
+        "label": "Bourne Shell Builtins",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html"
+      },
+      "bash-builtins": {
+        "label": "Bash Builtins",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html"
+      },
+      "read-builtin": {
+        "label": "read builtin",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html"
+      },
+      "printf": {
+        "label": "printf builtin",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html"
+      },
+      "ifs": {
+        "label": "IFS / Word Splitting",
+        "url": "https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html"
+      }
+    },
+    "wooledge": {
+      "commands-and-arguments": {
+        "label": "Commands and Arguments",
+        "url": "https://mywiki.wooledge.org/BashGuide/CommandsAndArguments"
+      },
+      "parameters": {
+        "label": "Parameters",
+        "url": "https://mywiki.wooledge.org/BashGuide/Parameters"
+      },
+      "patterns": {
+        "label": "Patterns",
+        "url": "https://mywiki.wooledge.org/BashGuide/Patterns"
+      },
+      "tests-and-conditionals": {
+        "label": "Tests and Conditionals",
+        "url": "https://mywiki.wooledge.org/BashGuide/TestsAndConditionals"
+      },
+      "arrays": {
+        "label": "Arrays",
+        "url": "https://mywiki.wooledge.org/BashGuide/Arrays"
+      },
+      "input-and-output": {
+        "label": "Input and Output",
+        "url": "https://mywiki.wooledge.org/BashGuide/InputAndOutput"
+      },
+      "compound-commands": {
+        "label": "Compound Commands",
+        "url": "https://mywiki.wooledge.org/BashGuide/CompoundCommands"
+      },
+      "practices": {
+        "label": "Practices",
+        "url": "https://mywiki.wooledge.org/BashGuide/Practices"
+      },
+      "bash-pitfalls": {
+        "label": "BashPitfalls",
+        "url": "https://mywiki.wooledge.org/BashPitfalls"
+      },
+      "bashfaq-001": {
+        "label": "BashFAQ/001",
+        "url": "https://mywiki.wooledge.org/BashFAQ/001"
+      },
+      "bashfaq-005": {
+        "label": "BashFAQ/005",
+        "url": "https://mywiki.wooledge.org/BashFAQ/005"
+      },
+      "bashfaq-006": {
+        "label": "BashFAQ/006",
+        "url": "https://mywiki.wooledge.org/BashFAQ/006"
+      },
+      "bashfaq-013": {
+        "label": "BashFAQ/013",
+        "url": "https://mywiki.wooledge.org/BashFAQ/013"
+      },
+      "bashfaq-020": {
+        "label": "BashFAQ/020",
+        "url": "https://mywiki.wooledge.org/BashFAQ/020"
+      },
+      "bashfaq-022": {
+        "label": "BashFAQ/022",
+        "url": "https://mywiki.wooledge.org/BashFAQ/022"
+      },
+      "bashfaq-028": {
+        "label": "BashFAQ/028",
+        "url": "https://mywiki.wooledge.org/BashFAQ/028"
+      },
+      "bashfaq-040": {
+        "label": "BashFAQ/040",
+        "url": "https://mywiki.wooledge.org/BashFAQ/040"
+      },
+      "bashfaq-046": {
+        "label": "BashFAQ/046",
+        "url": "https://mywiki.wooledge.org/BashFAQ/046"
+      },
+      "bashfaq-070": {
+        "label": "BashFAQ/070",
+        "url": "https://mywiki.wooledge.org/BashFAQ/070"
+      },
+      "bashfaq-073": {
+        "label": "BashFAQ/073",
+        "url": "https://mywiki.wooledge.org/BashFAQ/073"
+      },
+      "bashfaq-086": {
+        "label": "BashFAQ/086",
+        "url": "https://mywiki.wooledge.org/BashFAQ/086"
+      }
+    },
+    "shellcheck": {
+      "SC2004": {
+        "label": "SC2004",
+        "url": "https://www.shellcheck.net/wiki/SC2004",
+        "description": "$/${} is unnecessary on arithmetic variables."
+      },
+      "SC2030": {
+        "label": "SC2030",
+        "url": "https://www.shellcheck.net/wiki/SC2030",
+        "description": "Modification of a variable is local to the subshell caused by the pipeline."
+      },
+      "SC2031": {
+        "label": "SC2031",
+        "url": "https://www.shellcheck.net/wiki/SC2031",
+        "description": "A variable was modified in a subshell, so the change may be lost."
+      },
+      "SC2046": {
+        "label": "SC2046",
+        "url": "https://www.shellcheck.net/wiki/SC2046",
+        "description": "Quote command substitution output unless intentional splitting is required."
+      },
+      "SC2059": {
+        "label": "SC2059",
+        "url": "https://www.shellcheck.net/wiki/SC2059",
+        "description": "Do not use variables in the printf format string; use a fixed format."
+      },
+      "SC2068": {
+        "label": "SC2068",
+        "url": "https://www.shellcheck.net/wiki/SC2068",
+        "description": "Double quote array or parameter expansions to avoid re-splitting elements."
+      },
+      "SC2086": {
+        "label": "SC2086",
+        "url": "https://www.shellcheck.net/wiki/SC2086",
+        "description": "Double quote to prevent globbing and word splitting."
+      },
+      "SC2128": {
+        "label": "SC2128",
+        "url": "https://www.shellcheck.net/wiki/SC2128",
+        "description": "Expanding an array without an index only gives the first element."
+      },
+      "SC2145": {
+        "label": "SC2145",
+        "url": "https://www.shellcheck.net/wiki/SC2145",
+        "description": "Argument mixes string and array; keep arguments separate or use the intended expansion."
+      },
+      "SC2154": {
+        "label": "SC2154",
+        "url": "https://www.shellcheck.net/wiki/SC2154",
+        "description": "Variable is referenced but not assigned."
+      },
+      "SC2155": {
+        "label": "SC2155",
+        "url": "https://www.shellcheck.net/wiki/SC2155",
+        "description": "Declare and assign separately to avoid masking return values."
+      },
+      "SC2162": {
+        "label": "SC2162",
+        "url": "https://www.shellcheck.net/wiki/SC2162",
+        "description": "read without -r will mangle backslashes."
+      },
+      "SC2199": {
+        "label": "SC2199",
+        "url": "https://www.shellcheck.net/wiki/SC2199",
+        "description": "Arrays implicitly concatenate in [[ ]]; compare elements explicitly."
+      },
+      "SC2206": {
+        "label": "SC2206",
+        "url": "https://www.shellcheck.net/wiki/SC2206",
+        "description": "Quote to prevent word splitting/globbing, or split robustly with mapfile/read -a."
+      }
+    },
+    "google-bash-guide": {
+      "shell-files-and-interpreter-invocation": {
+        "label": "Shell Files and Interpreter Invocation",
+        "url": "https://google.github.io/styleguide/shellguide.html#shell-files-and-interpreter-invocation"
+      },
+      "comments": {
+        "label": "Comments",
+        "url": "https://google.github.io/styleguide/shellguide.html#comments"
+      },
+      "stdout-vs-stderr": {
+        "label": "STDOUT vs STDERR",
+        "url": "https://google.github.io/styleguide/shellguide.html#stdout-vs-stderr"
+      },
+      "checking-return-values": {
+        "label": "Checking Return Values",
+        "url": "https://google.github.io/styleguide/shellguide.html#checking-return-values"
+      },
+      "variable-expansion": {
+        "label": "Variable expansion",
+        "url": "https://google.github.io/styleguide/shellguide.html#variable-expansion"
+      },
+      "quoting": {
+        "label": "Quoting",
+        "url": "https://google.github.io/styleguide/shellguide.html#quoting"
+      },
+      "command-substitution": {
+        "label": "Command Substitution",
+        "url": "https://google.github.io/styleguide/shellguide.html#command-substitution"
+      },
+      "test-and-conditionals": {
+        "label": "Test and conditionals",
+        "url": "https://google.github.io/styleguide/shellguide.html#test--and-"
+      },
+      "arithmetic": {
+        "label": "Arithmetic",
+        "url": "https://google.github.io/styleguide/shellguide.html#arithmetic"
+      },
+      "use-local-variables": {
+        "label": "Use Local Variables",
+        "url": "https://google.github.io/styleguide/shellguide.html#use-local-variables"
+      },
+      "arrays": {
+        "label": "Arrays",
+        "url": "https://google.github.io/styleguide/shellguide.html#arrays"
+      },
+      "variable-names": {
+        "label": "Variable Names",
+        "url": "https://google.github.io/styleguide/shellguide.html#variable-names"
+      },
+      "functions": {
+        "label": "Functions",
+        "url": "https://google.github.io/styleguide/shellguide.html#functions"
+      },
+      "pipes-to-while": {
+        "label": "Pipes to While",
+        "url": "https://google.github.io/styleguide/shellguide.html#pipes-to-while"
+      },
+      "pipelines": {
+        "label": "Pipelines",
+        "url": "https://google.github.io/styleguide/shellguide.html#pipelines"
+      },
+      "calling-commands": {
+        "label": "Calling Commands",
+        "url": "https://google.github.io/styleguide/shellguide.html#calling-commands"
+      },
+      "line-length-and-long-strings": {
+        "label": "Line Length and Long Strings",
+        "url": "https://google.github.io/styleguide/shellguide.html#line-length-and-long-strings"
+      },
+      "main": {
+        "label": "main",
+        "url": "https://google.github.io/styleguide/shellguide.html#main"
+      }
+    }
+  }
+}
